@@ -13,12 +13,12 @@ function App() {
   const initailDisplay=[];
   posts.forEach((post)=>{
     const newPost={
-      postId: post.id,
+      ...post,
       display: false
     };
     initailDisplay.push(newPost);
   });
-  
+  setPosts(initailDisplay);
 
   function handleClick (event, element){
     event.preventDefault();
